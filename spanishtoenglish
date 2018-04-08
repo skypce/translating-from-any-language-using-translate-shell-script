@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+SEL=$(xsel -o)
+T="$(/usr/local/bin/trans -e deepl -o /tmp/output -theme=none :en "$SEL")"  #echo "Translation:" "$T" >> /tmp/
+ansi2html /tmp/output
+#yad --html --title="Google translate and definition"  --width=450 --height=300 --center  --text=/tmp/output  
+# notify-send "$T"
+#yad --info --title="Translation" --text="$T"
+zenity --text-info --title="Spanish to English" --filename=/tmp/output
