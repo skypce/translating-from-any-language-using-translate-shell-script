@@ -42,7 +42,7 @@ By default translator is set to deepL engine, you can modify script and change i
 ## Meta
 
 César R. Cid Méndez – [@YourTwitter](https://twitter.com/skypce) – skypce@gmail.com
-
+Credits to https://github.com/soimort/translate-shell by his awesome translation script.
 Distributed under the GPL license. See ``LICENSE`` for more information.
 
 [https://github.com/skypce/secure-passwords-script](https://github.com/skypce/secure-passwords-script)
