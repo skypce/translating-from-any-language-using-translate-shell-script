@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+rm /tmp/output
 SEL=$(xsel -o)
 T="$(/usr/local/bin/trans -e deepl -o /tmp/output -theme=none :en "$SEL")"  #echo "Translation:" "$T" >> /tmp/
 ansi2html /tmp/output
