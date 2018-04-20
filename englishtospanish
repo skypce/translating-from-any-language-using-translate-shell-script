@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
-rm /tmp/output
+VAR=$(date | md5sum)
+rm /tmp/VAR
 SEL=$(xsel -o)
-T="$(/usr/local/bin/trans -e deepl -o /tmp/output -theme=none :es "$SEL")"  #echo "Translation:" "$T" >> /tmp/
+T="$(/usr/local/bin/trans -s es -e deepl -o /tmp/$VAR -theme=none :es "$SEL")"  #echo$
 ansi2html /tmp/output
-zenity --text-info --title="English to Spanish" --filename=/tmp/output
+zenity --text-info --title="English to Spanish" --filename=/tmp/$VAR
+
