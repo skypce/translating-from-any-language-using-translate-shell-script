@@ -2,6 +2,6 @@
 VAR=$(date | md5sum)
 rm /tmp/VAR
 SEL=$(xsel -o)
-T="$(/usr/local/bin/trans -no-ansi -s es  -o /tmp/$VAR -theme=none :en "$SEL")"  #echo$
+T="$(/usr/local/bin/trans -no-ansi   -o /tmp/$VAR -theme=none :en "$SEL")"  #echo$
 zenity --text-info --title="English to Spanish" --filename=/tmp/$VAR
 
